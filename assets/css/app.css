@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap');
+*{
+	padding:0px;
+	margin:0px;
+	list-style-type: none;
+	text-decoration: none;
+	outline: 0px;
+	box-sizing: border-box;
+}
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+
+/*Universal styles*/
+.text-primary{
+    color: #0c529f !important;
+}
+.btn-primary {
+    background-color: #1863ab;
+    border-color: #0c529f;
+    border-radius: 3px;
+    padding:2px 0px;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #0c529f;
+    border-color: #0c51a0;
+}
+.btn-primary.focus, .btn-primary:focus {
+    box-shadow: 0 0 0 0.01rem rgba(38,143,255,.5) !important;
+}
+.form-control{
+	font-size: 0.8375rem !important;
+    color: #495057 !important;
+}
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #1991eb;
+    outline: 0;
+    box-shadow: 0 0 0 2px rgba(70, 127, 207, 0.25);
+}
+.has-error .form-control{
+  border-color: #cd201f;
+}
+.errorInfo{
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 11px;
+  color: #cd201f;
+  animation: fadeIn .4s;
+}
+.card-footer{
+	background-color: transparent;
+    border-top: 1px solid rgba(169, 159, 159, 0.48);
+    padding-left: 1px;
+    padding-right: 0px;
+}
+.alert span{
+    cursor: pointer;
+}
+
+
+/*Custome Checkbox Style*/
+.styled-checkbox {
+  position: absolute;
+  opacity: 0;
+}
+.styled-checkbox + label {
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+}
+.styled-checkbox + label:before {
+  content: "";
+  display: inline-block;
+  vertical-align: text-top;
+  width: 15px;
+  height: 15px;
+  background: white;
+  border:2px solid #0c529f82;
+  border-radius: 3px;
+  margin-top: 2px;
+  margin-right: 2px;
+}
+.styled-checkbox:focus + label:before {
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+}
+.styled-checkbox:checked + label:before {
+  animation:bounceIn .6s;
+  animation-iteration-count:1;
+  background: #0c529f;
+}
+.styled-checkbox:checked + label {
+  color: #0c529f;
+}
+.styled-checkbox:checked + label:after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 9px;
+  background: white;
+  width: 2px;
+  height: 2px;
+  box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+  transform: rotate(45deg);
+}
+
+
+
+
+
+
+
+.loginWrapper, .signupWrapper, .forgotWrapper{
+	width: 100%;
+	height: 100vh;
+	background-color: #d4ecf3;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+  overflow: auto;
+}
+
+/*Login Page styles*/
+.loginCard{
+	max-width: 352px;
+	width: calc(100% - 10px);
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 4px;
+  border-left: 4px solid #0e53a0;
+  background-color: white;
+}
+
+/*Signup Page styles*/
+.signupCard{
+	max-width: 500px;
+	width: calc(100% - 10px);
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 4px;
+  border-left: 4px solid #0e53a0;
+  background-color: white;
+}
+
+
+/*Forgot Page styles*/
+.forgotCard{
+	max-width: 450px;
+	width: calc(100% - 10px);
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 4px;
+  border-left: 4px solid #0e53a0;
+  background-color: white;
+}

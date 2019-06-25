@@ -1,0 +1,64 @@
+<div class="loginWrapper">
+  <div class="loginCard shadow">
+    <div class="card-body overflow-hidden">
+      <form class="form-signin" novalidate="" name="loginForm" ng-submit="loginSubmit(loginForm.$valid)">       
+        <div class="col-md-12 overflow-hidden p-0">   
+          <div class="text-center mb-4 p-0">
+            <a href="./"><img src="assets/images/logo.png"></a>
+          </div>
+        </div>
+
+        <div class="alert small" ng-class="{'alert-success':loginMessageType,'alert-danger':!loginMessageType}" ng-show="loginMessage">
+           {{loginMessage}}
+        </div>
+
+        <div class="form-group mb-1" ng-class="{'has-error':loginForm.email.$invalid && (loginForm.email.$dirty || loginForm.email.$touched  || loginForm.$submitted)}">
+          <label class="m-0 small">Email Address</label>
+          <input 
+            type="email" 
+            class="form-control" 
+            name="email" 
+            ng-model="login.email" 
+            placeholder="Email Address" 
+            required="" />
+          <p 
+            class="errorInfo m-0" 
+            ng-show="loginForm.email.$invalid && (loginForm.email.$dirty || loginForm.email.$touched  || loginForm.$submitted)"
+          >Please provide a valid Email.</p>
+        </div>
+
+        <div class="form-group mb-1" ng-class="{'has-error':loginForm.password.$invalid && (loginForm.password.$dirty || loginForm.password.$touched  || loginForm.$submitted)}">
+          <label class="m-0 small">Passowrd</label>
+          <input 
+            type="password" 
+            class="form-control" 
+            name="password" 
+            ng-model="login.password" 
+            placeholder="Password" 
+            required=""/>
+          <p 
+            class="errorInfo m-0" 
+            ng-show="loginForm.password.$invalid && (loginForm.password.$dirty ||  loginForm.password.$touched  || loginForm.$submitted)"
+          >Please provide a password.</p>
+        </div>
+
+        <div class="form-group mb-1">
+          <input type="checkbox" value="remember-me" id="rememberMe" value="rememberMe" ng-model="login.rememberMe" class="styled-checkbox" name="rememberMe">
+          <label class="checkbox small" for="rememberMe">
+            Remember me
+          </label> 
+        </div> 
+
+        <div class="card-footer overflow-hidden">
+          <div class="quickLinks pull-left">
+            <a href="forgot" class="text-primary small">Forgot Password ?</a><br>
+            <a href="signup" class="text-primary small">Create New Account ?</a><br>
+            <a href="./" class="text-primary small">Back to website ?</a>
+          </div>
+          <button class="btn-primary px-2 pull-right" type="submit">Login</button> 
+        </div>  
+
+      </form>
+    </div>
+  </div>
+</div>
